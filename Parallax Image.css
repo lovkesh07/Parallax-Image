@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+body{
+    background: #0c151b;
+}
+.parallar_des{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 5%;
+    
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around ;
+    width: 1000px;
+}
+
+.container .box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 5%;
+}
+.container .box .imgbox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1.5s ease-in-out;
+       
+}
+.container .box:hover .imgbox{
+    transform: translateY(-100%);
+}
+.container .box .imgbox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.container .box .layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1.5s ease-in-out;
+}
+
+.container .box .layer.layer1{
+    background: #0096ff;
+    transform: translateY(100%);
+}
+.container .box:hover .layer.layer1{
+    background: #0096ff;
+    transform: translateY(-100%);
+}
+.container .box .layer.layer2{
+    background: #4cdf12;
+    transform: translateY(200%);
+}
+.container .box:hover .layer.layer2{
+    transform: translateY(-100%);
+}
+.container .box .contentbx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: #fff;
+    transition: 1.5s ease-in-out;
+    transform: translateY(300%);
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    padding: 40px;
+}
+.container .box:hover .contentbx{
+    transform: translateY(10%);
+}
+.container .box .contentbx div{
+    transition: 1.5s ease-in-out;
+    transform: translateY(400%);
+}
+.container .box:hover .contentbx div{
+    
+    transform: translateY(0%);
+}
