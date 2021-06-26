@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="3d-social .css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <section class="socialmedia">
+        <ul class="sci">
+
+            <li data-text="Facebook" data-color="#1877f2">
+                <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>               </a>
+            </li>
+            <li data-text="Youtube" data-color="#f22618">
+                <a href="#" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>               </a>
+            </li>
+            <li data-text="Twitter" data-color="#16d0ff">
+                <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>               </a>
+            </li>
+            <li data-text="Instagram" data-color='#f21861'>
+                <a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>               </a>
+            </li>
+
+        </ul>
+
+    </section>
+    <script src="vanilla-tilt.min.js"></script>
+    <script>
+         VanillaTilt.init(document.querySelectorAll(".sci li a"), {   //here in the brackets() add the name jispay ye effect lagana hai 
+		max: 30,
+		speed: 400,
+        glare: true,      //to get glow effects
+        "max-glare":1,    //same
+	});
+
+    let list = document.querySelectorAll('.sci li');
+    let bg = document.querySelector('.socialmedia');
+    list.forEach(elements => {
+        elements.addEventListener('mouseenter',function (event){
+            let color = event.target.getAttribute('data-color');
+            bg.style.backgroundColor = color;
+        })
+         elements.addEventListener('mouseleave',function (event){    
+             bg.style.backgroundColor = '#fff';
+         })
+
+    })
+	
+    </script>
+</body>
+</html>
